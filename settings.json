@@ -1,0 +1,3506 @@
+{
+  "droneup-android": {
+    "type": "bitrise",
+    "requiredArgs": {
+      "target": [
+        "-t, --target <target>",
+        "Settings applied to application build\ndev, test, live, release are valid."
+      ],
+      "branch": [
+        "-b, --branch <branch>",
+        "Branch name of commit sha to be built by application."
+      ]
+    },
+    "dev": {
+      "build": "Android Dev Build",
+      "repo_url": "git@bitbucket.org:webteks/com.dartfleet.mobile.android.git",
+      "upstream_repo_url": "git@bitbucket.org:/webteks/com.dartfleet.mobile.android.git",
+      "upstream_repo_branch": "develop",
+      "default_branch": "develop",
+      "parent_branch": "master",
+      "bitrise": {
+        "release_url": "https://www.bitrise.io/app/924b6f01d53b3d1b/build/start.json",
+        "release_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "sVZa7wJCr2ENIT2HKf3fpA"
+          },
+          "build_params": {
+            "workflow_id": "RELEASE",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "adhoc_url": "https://www.bitrise.io/app/924b6f01d53b3d1b/build/start.json",
+        "adhoc_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "sVZa7wJCr2ENIT2HKf3fpA"
+          },
+          "build_params": {
+            "workflow_id": "primary",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "additional_json": [
+          {
+            "mapped_to": "BUILD_SLACK_URL",
+            "value": "https://hooks.slack.com/services/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",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_SETTINGS_DOWNLOAD_URL",
+            "value": "$BITRISEIO_dev_env_URL",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BUILD_GRADLE_TASK",
+            "value": "assembleDevDebug",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_APPLICATION_ID",
+            "value": "6310BC44-383B-6119-FF03-01F4D2EC6D00",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BACKENDLESS_SECRET_KEY",
+            "value": "22D17921-927C-5093-FF6D-0B979DD94500",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BACKENDLESS_VERSION",
+            "value": "dev",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "SERVER_URL",
+            "value": "https://droneup.backendless.com/api",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "CLOUDINARY_URL",
+            "value": "http://res.cloudinary.com/dartfleet",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "TERMS_OF_USE_URL",
+            "value": "https://www.droneup.com/terms",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "GCM_SENDER_ID",
+            "value": "158187728515",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "GOOGLE_API_KEY",
+            "value": "AIzaSyClYIDHc7px6vy0tha8t0hPI7TVGCe-0NA",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "LOGENTRIES_TOKEN",
+            "value": "a718e89d-1921-47fe-be2c-16e2819ff8ea",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "LOGGING_DISABLED",
+            "value": "false",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "SUPPLY_APK",
+            "value": "$BITRISE_APK_PATH",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "HOTLINE_ID",
+            "value": "ede9b329-74e5-4557-a416-03669424dfd2",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "HOTLINE_KEY",
+            "value": "807c76ba-c76d-4e76-88e4-951c903c8d6e",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "AUTH0_CLIENT_ID",
+            "value": "rveo8Js2tSr2XOqpbD4RVvFUz2RMhVir",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "AUTH0_DOMAIN",
+            "value": "droneup-dev.auth0.com",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "TESTFAIRY_APP_TOKEN",
+            "value": "e59c611b9ab90114a5b8377360cf8b91e9264405",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "TESTFAIRY_ENABLED",
+            "value": "false",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "APIXU_API_URL",
+            "value": "http://api.apixu.com/v1",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "APIXU_API_KEY",
+            "value": "1bf3f88ea0ad48af937191430171705",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "INSTABUG_KEY",
+            "value": "e04fda21120018b73a8e555529112f86",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "SENDBIRD_API_KEY",
+            "value": "45F45C45-0625-446B-AF80-57E5C434055B",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "FIREBASE_APP_ID",
+            "value": "droneup-3f6b1",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "FIREBASE_SENDER_ID",
+            "value": "359387352936",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "TRAINING_PLATFORM_URL",
+            "value": "https://test-droneuplms.pantheonsite.io",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "KEYSTORE",
+            "value": "/root/keystores/release.keystore",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "KEY_ALIAS",
+            "value": "DARTFleet",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "KEY_PASSWORD",
+            "value": "Z1wJNYfvJ6Ip",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "KEYSTORE_PASSWORD",
+            "value": "8qLiKqB47GJC",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "CLOUDINARY_WATERMARK",
+            "value": "",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "S3_IMAGE_BUCKET",
+            "value": "droneup-dev-images",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "S3_VIDEO_BUCKET",
+            "value": "droneup-dev-source-15oa8sk8c93cg",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "S3_API_KEY",
+            "value": "AKIAJVKKWJ5PNKA3JTTQ",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "S3_API_SECRET",
+            "value": "zXS+MzLfdwcmJmnkyjED9EKX8oCbos0FajXgjxZG",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "SLACK_CHANNEL",
+            "value": "#c_droneup_dev_android",
+            "is_expand": "true"
+          }
+        ]
+      },
+      "version_seed": "1.6.11",
+      "release_name": "dev",
+      "versioning": "prepatch"
+    },
+    "test": {
+      "build": "Android Test Build",
+      "repo_url": "git@bitbucket.org:webteks/com.dartfleet.mobile.android.git",
+      "upstream_repo_url": "git@bitbucket.org:/webteks/com.dartfleet.mobile.android.git",
+      "upstream_repo_branch": "develop",
+      "default_branch": "develop",
+      "parent_branch": "master",
+      "bitrise": {
+        "release_url": "https://www.bitrise.io/app/924b6f01d53b3d1b/build/start.json",
+        "release_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "sVZa7wJCr2ENIT2HKf3fpA"
+          },
+          "build_params": {
+            "workflow_id": "RELEASE",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "adhoc_url": "https://www.bitrise.io/app/924b6f01d53b3d1b/build/start.json",
+        "adhoc_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "sVZa7wJCr2ENIT2HKf3fpA"
+          },
+          "build_params": {
+            "workflow_id": "primary",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "additional_json": [
+          {
+            "mapped_to": "BUILD_SLACK_URL",
+            "value": "https://hooks.slack.com/services/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",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_GRADLE_TASK",
+            "value": "assembleAlphaDebug",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_APPLICATION_ID",
+            "value": "1529EBD5-33A8-6708-FF59-D4B16330F600",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BACKENDLESS_SECRET_KEY",
+            "value": "854497D6-2C51-3E74-FF1D-B6ED22EC8000",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BACKENDLESS_VERSION",
+            "value": "dev",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "SERVER_URL",
+            "value": "https://api.backendless.com",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "CLOUDINARY_URL",
+            "value": "cloudinary://336651536233743:HBT1xRMow1-SnTyMVBfgHH_IBeo@dartfleet",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "TERMS_OF_USE_URL",
+            "value": "https://test-flywithdartcom.pantheonsite.io/terms/",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "GCM_SENDER_ID",
+            "value": "158187728515",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "GOOGLE_API_KEY",
+            "value": "AIzaSyClYIDHc7px6vy0tha8t0hPI7TVGCe-0NA",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "LOGENTRIES_TOKEN",
+            "value": "abcf12f3-b2fb-4e51-ac97-78e4161d3b21",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "LOGGING_DISABLED",
+            "value": "false",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "SUPPLY_APK",
+            "value": "$BITRISE_APK_PATH",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "HOTLINE_ID",
+            "value": "ede9b329-74e5-4557-a416-03669424dfd2",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "HOTLINE_KEY",
+            "value": "807c76ba-c76d-4e76-88e4-951c903c8d6e",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "AUTH0_CLIENT_ID",
+            "value": "Xv3mIDWqhZ6p54eICkIiO0ZAuHv4GcZb",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "AUTH0_DOMAIN",
+            "value": "droneup-test.auth0.com",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "TESTFAIRY_APP_TOKEN",
+            "value": "e59c611b9ab90114a5b8377360cf8b91e9264405",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "TESTFAIRY_ENABLED",
+            "value": "false",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "APIXU_API_URL",
+            "value": "http://api.apixu.com/v1",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "APIXU_API_KEY",
+            "value": "1bf3f88ea0ad48af937191430171705",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "INSTABUG_KEY",
+            "value": "e04fda21120018b73a8e555529112f86",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "SENDBIRD_API_KEY",
+            "value": "18696103-8A2A-44AB-A04D-941A9B5C8CE7",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "FIREBASE_APP_ID",
+            "value": "droneup-3f6b1",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "FIREBASE_SENDER_ID",
+            "value": "359387352936",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "TRAINING_PLATFORM_URL",
+            "value": "https://test-droneuplms.pantheonsite.io",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "KEYSTORE",
+            "value": "/root/keystores/release.keystore",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "KEY_ALIAS",
+            "value": "DARTFleet",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "KEY_PASSWORD",
+            "value": "Z1wJNYfvJ6Ip",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "KEYSTORE_PASSWORD",
+            "value": "8qLiKqB47GJC",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "CLOUDINARY_WATERMARK",
+            "value": "",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "S3_IMAGE_BUCKET",
+            "value": "droneup-dev-images",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "S3_VIDEO_BUCKET",
+            "value": "droneup-dev-source-15oa8sk8c93cg-bad",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "S3_API_KEY",
+            "value": "AKIAJK23FATA62FLB4OA",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "S3_API_SECRET",
+            "value": "bVFlCDlSLvJlpMft1kByd6tMbX0sGA4o9hr3XjeG",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "SLACK_CHANNEL",
+            "value": "#c_droneup_dev_android",
+            "is_expand": "true"
+          }
+        ]
+      },
+      "version_seed": "1.6.11",
+      "release_name": "test",
+      "versioning": "prepatch"
+    },
+    "live": {
+      "build": "Android Live Build",
+      "repo_url": "git@bitbucket.org:webteks/com.dartfleet.mobile.android.git",
+      "upstream_repo_url": "git@bitbucket.org:/webteks/com.dartfleet.mobile.android.git",
+      "upstream_repo_branch": "develop",
+      "default_branch": "develop",
+      "parent_branch": "develop",
+      "bitrise": {
+        "release_url": "https://www.bitrise.io/app/924b6f01d53b3d1b/build/start.json",
+        "release_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "sVZa7wJCr2ENIT2HKf3fpA"
+          },
+          "build_params": {
+            "workflow_id": "RELEASE",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "adhoc_url": "https://www.bitrise.io/app/924b6f01d53b3d1b/build/start.json",
+        "adhoc_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "sVZa7wJCr2ENIT2HKf3fpA"
+          },
+          "build_params": {
+            "workflow_id": "primary",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "additional_json": [
+          {
+            "mapped_to": "BUILD_SLACK_URL",
+            "value": "https://hooks.slack.com/services/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",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_SETTINGS_DOWNLOAD_URL",
+            "value": "$BITRISEIO_live_env_URL",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BUILD_GRADLE_TASK",
+            "value": "assembleLiveRelease",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_APPLICATION_ID",
+            "value": "D5AF1CB4-2698-9DDA-FF93-441EF9736A00",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BACKENDLESS_SECRET_KEY",
+            "value": "FC3115CC-4A25-546D-FF2A-7C8075FC2F00",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BACKENDLESS_VERSION",
+            "value": "dev",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "SERVER_URL",
+            "value": "https://droneup.backendless.com/api",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "CLOUDINARY_URL",
+            "value": "http://res.cloudinary.com/dartfleet",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "TERMS_OF_USE_URL",
+            "value": "https://www.droneup.com/terms/",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "GCM_SENDER_ID",
+            "value": "158187728515",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "GOOGLE_API_KEY",
+            "value": "AIzaSyClYIDHc7px6vy0tha8t0hPI7TVGCe-0NA",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "LOGENTRIES_TOKEN",
+            "value": "abcf12f3-b2fb-4e51-ac97-78e4161d3b21",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "LOGGING_DISABLED",
+            "value": "true",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "SUPPLY_APK",
+            "value": "$BITRISE_APK_PATH",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "HOTLINE_ID",
+            "value": "ede9b329-74e5-4557-a416-03669424dfd2",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "HOTLINE_KEY",
+            "value": "807c76ba-c76d-4e76-88e4-951c903c8d6e",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "AUTH0_CLIENT_ID",
+            "value": "uf6ns7OpPCLn53CuG5Dnp6PWs2aR7hlJ",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "AUTH0_DOMAIN",
+            "value": "droneup.auth0.com",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "TESTFAIRY_APP_TOKEN",
+            "value": "e59c611b9ab90114a5b8377360cf8b91e9264405",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "TESTFAIRY_ENABLED",
+            "value": "false",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "APIXU_API_URL",
+            "value": "http://api.apixu.com/v1",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "APIXU_API_KEY",
+            "value": "1bf3f88ea0ad48af937191430171705",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "INSTABUG_KEY",
+            "value": "497670c6bc92fd2e7ea495c38afd6ce0",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "SENDBIRD_API_KEY",
+            "value": "895F21E1-20A3-4CDB-8278-C1575016CA65",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "FIREBASE_APP_ID",
+            "value": "droneup-3f6b1",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "FIREBASE_SENDER_ID",
+            "value": "359387352936",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "TRAINING_PLATFORM_URL",
+            "value": "https://live-droneuplms.pantheonsite.io",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "KEYSTORE",
+            "value": "/root/keystores/release.keystore",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "KEY_ALIAS",
+            "value": "DARTFleet",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "KEY_PASSWORD",
+            "value": "Z1wJNYfvJ6Ip",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "KEYSTORE_PASSWORD",
+            "value": "8qLiKqB47GJC",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "CLOUDINARY_WATERMARK",
+            "value": "",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "S3_IMAGE_BUCKET",
+            "value": "droneup-images",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "S3_VIDEO_BUCKET",
+            "value": "droneup-source-1ov33bg3pmwou",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "S3_API_KEY",
+            "value": "AKIAJK23FATA62FLB4OA",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "S3_API_SECRET",
+            "value": "bVFlCDlSLvJlpMft1kByd6tMbX0sGA4o9hr3XjeG",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "SLACK_CHANNEL",
+            "value": "#c_droneup_dev_android",
+            "is_expand": "true"
+          }
+        ]
+      },
+      "version_seed": "1.6.11",
+      "release_name": "live",
+      "versioning": "patch"
+    },
+    "release": {
+      "build": "Android Live Build",
+      "repo_url": "git@bitbucket.org:webteks/com.dartfleet.mobile.android.git",
+      "upstream_repo_url": "git@bitbucket.org:/webteks/com.dartfleet.mobile.android.git",
+      "upstream_repo_branch": "develop",
+      "default_branch": "develop",
+      "parent_branch": "develop",
+      "bitrise": {
+        "release_url": "https://www.bitrise.io/app/924b6f01d53b3d1b/build/start.json",
+        "release_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "sVZa7wJCr2ENIT2HKf3fpA"
+          },
+          "build_params": {
+            "workflow_id": "RELEASE",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "adhoc_url": "https://www.bitrise.io/app/924b6f01d53b3d1b/build/start.json",
+        "adhoc_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "sVZa7wJCr2ENIT2HKf3fpA"
+          },
+          "build_params": {
+            "workflow_id": "RELEASE",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "additional_json": [
+          {
+            "mapped_to": "BUILD_SLACK_URL",
+            "value": "https://hooks.slack.com/services/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",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_SETTINGS_DOWNLOAD_URL",
+            "value": "$BITRISEIO_live_env_URL",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BUILD_GRADLE_TASK",
+            "value": "assembleLiveRelease",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_APPLICATION_ID",
+            "value": "D5AF1CB4-2698-9DDA-FF93-441EF9736A00",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BACKENDLESS_SECRET_KEY",
+            "value": "FC3115CC-4A25-546D-FF2A-7C8075FC2F00",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BACKENDLESS_VERSION",
+            "value": "dev",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "SERVER_URL",
+            "value": "https://droneup.backendless.com/api",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "CLOUDINARY_URL",
+            "value": "http://res.cloudinary.com/dartfleet",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "TERMS_OF_USE_URL",
+            "value": "https://www.droneup.com/terms/",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "GCM_SENDER_ID",
+            "value": "158187728515",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "GOOGLE_API_KEY",
+            "value": "AIzaSyClYIDHc7px6vy0tha8t0hPI7TVGCe-0NA",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "LOGENTRIES_TOKEN",
+            "value": "abcf12f3-b2fb-4e51-ac97-78e4161d3b21",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "LOGGING_DISABLED",
+            "value": "true",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "SUPPLY_APK",
+            "value": "$BITRISE_APK_PATH",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "HOTLINE_ID",
+            "value": "ede9b329-74e5-4557-a416-03669424dfd2",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "HOTLINE_KEY",
+            "value": "807c76ba-c76d-4e76-88e4-951c903c8d6e",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "AUTH0_CLIENT_ID",
+            "value": "uf6ns7OpPCLn53CuG5Dnp6PWs2aR7hlJ",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "AUTH0_DOMAIN",
+            "value": "droneup.auth0.com",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "TESTFAIRY_APP_TOKEN",
+            "value": "e59c611b9ab90114a5b8377360cf8b91e9264405",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "TESTFAIRY_ENABLED",
+            "value": "false",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "APIXU_API_URL",
+            "value": "http://api.apixu.com/v1",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "APIXU_API_KEY",
+            "value": "1bf3f88ea0ad48af937191430171705",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "INSTABUG_KEY",
+            "value": "497670c6bc92fd2e7ea495c38afd6ce0",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "SENDBIRD_API_KEY",
+            "value": "895F21E1-20A3-4CDB-8278-C1575016CA65",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "FIREBASE_APP_ID",
+            "value": "droneup-3f6b1",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "FIREBASE_SENDER_ID",
+            "value": "359387352936",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "TRAINING_PLATFORM_URL",
+            "value": "https://live-droneuplms.pantheonsite.io",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "KEYSTORE",
+            "value": "/root/keystores/release.keystore",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "KEY_ALIAS",
+            "value": "DARTFleet",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "KEY_PASSWORD",
+            "value": "Z1wJNYfvJ6Ip",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "KEYSTORE_PASSWORD",
+            "value": "8qLiKqB47GJC",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "CLOUDINARY_WATERMARK",
+            "value": "",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "S3_IMAGE_BUCKET",
+            "value": "droneup-images",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "S3_VIDEO_BUCKET",
+            "value": "droneup-source-1ov33bg3pmwou",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "S3_API_KEY",
+            "value": "AKIAJK23FATA62FLB4OA",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "S3_API_SECRET",
+            "value": "bVFlCDlSLvJlpMft1kByd6tMbX0sGA4o9hr3XjeG",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "SLACK_CHANNEL",
+            "value": "#c_droneup_dev_android",
+            "is_expand": "true"
+          }
+        ]
+      },
+      "version_seed": "1.6.11",
+      "release_name": "live",
+      "versioning": "patch"
+    }
+  },
+  "droneup-ios": {
+    "type": "bitrise",
+    "requiredArgs": {
+      "target": [
+        "-t, --target <target>",
+        "Settings applied to application build\ndev, test, live, release are valid."
+      ],
+      "branch": [
+        "-b, --branch <branch>",
+        "Branch name of commit sha to be built by application."
+      ]
+    },
+    "dev": {
+      "build": "Bitrise iOS DroneUp DEV Build",
+      "repo_url": "git@bitbucket.org:webteks/com.dartfleet.mobile.ios.git",
+      "upstream_repo_url": "git@bitbucket.org:/webteks/com.dartfleet.mobile.ios.git",
+      "upstream_repo_branch": "develop",
+      "default_branch": "develop",
+      "parent_branch": "develop",
+      "bitrise": {
+        "adhoc_url": "https://www.bitrise.io/app/26eb0b9ba9b15b56/build/start.json",
+        "release_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "38pck0_3z2Da8--763WdCg"
+          },
+          "build_params": {
+            "workflow_id": "RELEASE",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "release_url": "https://www.bitrise.io/app/26eb0b9ba9b15b56/build/start.json",
+        "adhoc_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "38pck0_3z2Da8--763WdCg"
+          },
+          "build_params": {
+            "workflow_id": "primary",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "additional_json": [
+          {
+            "mapped_to": "BUILD_SLACK_URL",
+            "value": "https://hooks.slack.com/services/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",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BACKENDLESS_APPLICATION_ID",
+            "value": "6310BC44-383B-6119-FF03-01F4D2EC6D00",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BACKENDLESS_SECRET_KEY",
+            "value": "CD233383-02B8-947C-FF62-883EE3256A00",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "SERVER_URL",
+            "value": "https://droneup.backendless.com/api",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BACKENDLESS_VERSION",
+            "value": "dev",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_CLOUDINARY_API_KEY",
+            "value": "336651536233743",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_CLOUDINARY_API_SECRET",
+            "value": "HBT1xRMow1-SnTyMVBfgHH_IBeo",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_CLOUDINARY_NAME",
+            "value": "dartfleet",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_TERMS_OF_USE_URL",
+            "value": "http://www.droneup.com/terms",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_APIXU_API_URL",
+            "value": "https://api.apixu.com/v1",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_GOOGLE_API_KEY",
+            "value": "AIzaSyBnU2-yXVykKNmLf1WRzDt_7zK--KzyO3U",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_GOOGLE_PLACES_API_KEY",
+            "value": "AIzaSyBnU2-yXVykKNmLf1WRzDt_7zK--KzyO3U",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_LOGGING_DISABLED",
+            "value": "false",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_AUTH0_DOMAIN",
+            "value": "droneup-dev.auth0.com",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_AUTH0_CLIENT_ID",
+            "value": "rveo8Js2tSr2XOqpbD4RVvFUz2RMhVir",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_TRAINING_PLATFORM_URL",
+            "value": "https://dev-droneuplms.pantheonsite.io",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_HOTLINE_ID",
+            "value": "ede9b329-74e5-4557-a416-03669424dfd2",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_HOTLINE_KEY",
+            "value": "dev-droneuplms.pantheonsite.io",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_APIXU_API_KEY",
+            "value": "1bf3f88ea0ad48af937191430171705",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_INSTABUG_KEY",
+            "value": "cb5524904793e28406a6d74dd2f7c365",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_SENDBIRD_APP_ID",
+            "value": "45F45C45-0625-446B-AF80-57E5C434055B",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_CLOUDINARY_WATERMARK",
+            "value": "",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_S3_IMAGE_BUCKET",
+            "value": "droneup-dev-images",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_S3_VIDEO_BUCKET",
+            "value": "droneup-dev-source-15oa8sk8c93cg",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_S3_API_KEY",
+            "value": "AKIAJVKKWJ5PNKA3JTTQ",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_S3_API_SECRET",
+            "value": "zXS+MzLfdwcmJmnkyjED9EKX8oCbos0FajXgjxZG",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_FABRIC_API_KEY",
+            "value": "5614d035a89b82ce658adecedc8591f6b6e4414f",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_FABRIC_BUILD_SECRET",
+            "value": "1bcc5ecd08ab52bf2885a09e4e2c8aa0968e25fda1f6c9ca4ddc559ef7dc9267",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "SLACK_CHANNEL",
+            "value": "#c_droneup_dev_ios",
+            "is_expand": "true"
+          }
+        ]
+      },
+      "version_seed": "1.2.0",
+      "release_name": "dev",
+      "versioning": "prepatch"
+    },
+    "test": {
+      "build": "Bitrise iOS DroneUp Test Build",
+      "repo_url": "git@bitbucket.org:webteks/com.dartfleet.mobile.ios.git",
+      "upstream_repo_url": "git@bitbucket.org:/webteks/com.dartfleet.mobile.ios.git",
+      "upstream_repo_branch": "develop",
+      "default_branch": "develop",
+      "parent_branch": "develop",
+      "bitrise": {
+        "adhoc_url": "https://www.bitrise.io/app/26eb0b9ba9b15b56/build/start.json",
+        "release_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "38pck0_3z2Da8--763WdCg"
+          },
+          "build_params": {
+            "workflow_id": "RELEASE",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "adhoc_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "38pck0_3z2Da8--763WdCg"
+          },
+          "build_params": {
+            "workflow_id": "primary",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "additional_json": [
+          {
+            "mapped_to": "BUILD_SLACK_URL",
+            "value": "https://hooks.slack.com/services/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",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BACKENDLESS_APPLICATION_ID",
+            "value": "1529EBD5-33A8-6708-FF59-D4B16330F600",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BACKENDLESS_SECRET_KEY",
+            "value": "6C2754B1-E110-7F93-FFE9-BE3F515FDB00",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "SERVER_URL",
+            "value": "https://droneup.backendless.com/api",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BACKENDLESS_VERSION",
+            "value": "dev",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_CLOUDINARY_API_KEY",
+            "value": "336651536233743",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_CLOUDINARY_API_SECRET",
+            "value": "HBT1xRMow1-SnTyMVBfgHH_IBeo",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_CLOUDINARY_NAME",
+            "value": "dartfleet",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_TERMS_OF_USE_URL",
+            "value": "http://test-flywithdartcom.pantheonsite.io/terms",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_APIXU_API_URL",
+            "value": "https://api.apixu.com/v1",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_GOOGLE_API_KEY",
+            "value": "AIzaSyBnU2-yXVykKNmLf1WRzDt_7zK--KzyO3U",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_GOOGLE_PLACES_API_KEY",
+            "value": "AIzaSyBnU2-yXVykKNmLf1WRzDt_7zK--KzyO3U",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_LOGGING_DISABLED",
+            "value": "false",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_AUTH0_DOMAIN",
+            "value": "droneup-test.auth0.com",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_AUTH0_CLIENT_ID",
+            "value": "Xv3mIDWqhZ6p54eICkIiO0ZAuHv4GcZb",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_TRAINING_PLATFORM_URL",
+            "value": "http://test-droneuplms.pantheonsite.io",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_HOTLINE_ID",
+            "value": "ede9b329-74e5-4557-a416-03669424dfd2",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_HOTLINE_KEY",
+            "value": "807c76ba-c76d-4e76-88e4-951c903c8d6e",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_APIXU_API_KEY",
+            "value": "1bf3f88ea0ad48af937191430171705",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_INSTABUG_KEY",
+            "value": "cb5524904793e28406a6d74dd2f7c365",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_SENDBIRD_APP_ID",
+            "value": "18696103-8A2A-44AB-A04D-941A9B5C8CE7",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_CLOUDINARY_WATERMARK",
+            "value": "",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_S3_IMAGE_BUCKET",
+            "value": "droneup-dev-images",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_S3_VIDEO_BUCKET",
+            "value": "droneup-dev-source-15oa8sk8c93cg-bad",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_S3_API_KEY",
+            "value": "AKIAJK23FATA62FLB4OA",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_S3_API_SECRET",
+            "value": "bVFlCDlSLvJlpMft1kByd6tMbX0sGA4o9hr3XjeG",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_FABRIC_API_KEY",
+            "value": "5614d035a89b82ce658adecedc8591f6b6e4414f",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_FABRIC_BUILD_SECRET",
+            "value": "1bcc5ecd08ab52bf2885a09e4e2c8aa0968e25fda1f6c9ca4ddc559ef7dc9267",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "SLACK_CHANNEL",
+            "value": "#c_droneup_dev_ios",
+            "is_expand": "true"
+          }
+        ]
+      },
+      "version_seed": "1.2.0",
+      "release_name": "test",
+      "versioning": "prepatch"
+    },
+    "live": {
+      "build": "Bitrise iOS DroneUp Live Build",
+      "repo_url": "git@bitbucket.org:webteks/com.dartfleet.mobile.ios.git",
+      "upstream_repo_url": "git@bitbucket.org:/webteks/com.dartfleet.mobile.ios.git",
+      "upstream_repo_branch": "develop",
+      "default_branch": "develop",
+      "parent_branch": "develop",
+      "bitrise": {
+        "release_url": "https://www.bitrise.io/app/26eb0b9ba9b15b56/build/start.json",
+        "release_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "38pck0_3z2Da8--763WdCg"
+          },
+          "build_params": {
+            "workflow_id": "RELEASE",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "adhoc_url": "https://www.bitrise.io/app/26eb0b9ba9b15b56/build/start.json",
+        "adhoc_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "38pck0_3z2Da8--763WdCg"
+          },
+          "build_params": {
+            "workflow_id": "primary",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "additional_json": [
+          {
+            "mapped_to": "BUILD_SLACK_URL",
+            "value": "https://hooks.slack.com/services/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",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BACKENDLESS_APPLICATION_ID",
+            "value": "D5AF1CB4-2698-9DDA-FF93-441EF9736A00",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BACKENDLESS_SECRET_KEY",
+            "value": "63C24780-5DB2-44EB-FF45-E3AEF4255000",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "SERVER_URL",
+            "value": "https://droneup.backendless.com/api",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BACKENDLESS_VERSION",
+            "value": "dev",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_CLOUDINARY_API_KEY",
+            "value": "336651536233743",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_CLOUDINARY_API_SECRET",
+            "value": "HBT1xRMow1-SnTyMVBfgHH_IBeo",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_CLOUDINARY_NAME",
+            "value": "dartfleet",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_TERMS_OF_USE_URL",
+            "value": "https://www.droneup.com/terms",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_APIXU_API_URL",
+            "value": "https://api.apixu.com/v1",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_GOOGLE_API_KEY",
+            "value": "AIzaSyBnU2-yXVykKNmLf1WRzDt_7zK--KzyO3U",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_GOOGLE_PLACES_API_KEY",
+            "value": "AIzaSyBnU2-yXVykKNmLf1WRzDt_7zK--KzyO3U",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_LOGGING_DISABLED",
+            "value": "false",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_AUTH0_DOMAIN",
+            "value": "droneup.auth0.com",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_AUTH0_CLIENT_ID",
+            "value": "uf6ns7OpPCLn53CuG5Dnp6PWs2aR7hlJ",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_TRAINING_PLATFORM_URL",
+            "value": "http://live-droneuplms.pantheonsite.io",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_HOTLINE_ID",
+            "value": "ede9b329-74e5-4557-a416-03669424dfd2",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_HOTLINE_KEY",
+            "value": "807c76ba-c76d-4e76-88e4-951c903c8d6e",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_APIXU_API_KEY",
+            "value": "1bf3f88ea0ad48af937191430171705",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_INSTABUG_KEY",
+            "value": "ddf1a6e9c951de2a258d2fb40dada1c6",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_SENDBIRD_APP_ID",
+            "value": "895F21E1-20A3-4CDB-8278-C1575016CA65",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_CLOUDINARY_WATERMARK",
+            "value": "",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_S3_IMAGE_BUCKET",
+            "value": "droneup-images",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_S3_VIDEO_BUCKET",
+            "value": "droneup-source-1ov33bg3pmwou",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_S3_API_KEY",
+            "value": "AKIAJK23FATA62FLB4OA",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_S3_API_SECRET",
+            "value": "bVFlCDlSLvJlpMft1kByd6tMbX0sGA4o9hr3XjeG",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "SLACK_CHANNEL",
+            "value": "#c_droneup_dev_ios",
+            "is_expand": "true"
+          }
+        ]
+      },
+      "version_seed": "1.2.0",
+      "release_name": "live",
+      "versioning": "patch"
+    },
+    "release": {
+      "build": "Bitrise iOS DroneUp Live Build",
+      "repo_url": "git@bitbucket.org:webteks/com.dartfleet.mobile.ios.git",
+      "upstream_repo_url": "git@bitbucket.org:/webteks/com.dartfleet.mobile.ios.git",
+      "upstream_repo_branch": "develop",
+      "default_branch": "develop",
+      "parent_branch": "develop",
+      "bitrise": {
+        "release_url": "https://www.bitrise.io/app/26eb0b9ba9b15b56/build/start.json",
+        "release_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "38pck0_3z2Da8--763WdCg"
+          },
+          "build_params": {
+            "workflow_id": "RELEASE",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "adhoc_url": "https://www.bitrise.io/app/26eb0b9ba9b15b56/build/start.json",
+        "adhoc_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "38pck0_3z2Da8--763WdCg"
+          },
+          "build_params": {
+            "workflow_id": "RELEASE",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "additional_json": [
+          {
+            "mapped_to": "BUILD_SLACK_URL",
+            "value": "https://hooks.slack.com/services/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",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BACKENDLESS_APPLICATION_ID",
+            "value": "D5AF1CB4-2698-9DDA-FF93-441EF9736A00",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BACKENDLESS_SECRET_KEY",
+            "value": "63C24780-5DB2-44EB-FF45-E3AEF4255000",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "SERVER_URL",
+            "value": "https://droneup.backendless.com/api",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BACKENDLESS_VERSION",
+            "value": "dev",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_CLOUDINARY_API_KEY",
+            "value": "336651536233743",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_CLOUDINARY_API_SECRET",
+            "value": "HBT1xRMow1-SnTyMVBfgHH_IBeo",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_CLOUDINARY_NAME",
+            "value": "dartfleet",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_TERMS_OF_USE_URL",
+            "value": "https://www.droneup.com/terms",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_APIXU_API_URL",
+            "value": "https://api.apixu.com/v1",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_GOOGLE_API_KEY",
+            "value": "AIzaSyBnU2-yXVykKNmLf1WRzDt_7zK--KzyO3U",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_GOOGLE_PLACES_API_KEY",
+            "value": "AIzaSyBnU2-yXVykKNmLf1WRzDt_7zK--KzyO3U",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_LOGGING_DISABLED",
+            "value": "false",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_AUTH0_DOMAIN",
+            "value": "droneup.auth0.com",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_AUTH0_CLIENT_ID",
+            "value": "uf6ns7OpPCLn53CuG5Dnp6PWs2aR7hlJ",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_TRAINING_PLATFORM_URL",
+            "value": "http://live-droneuplms.pantheonsite.io",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_HOTLINE_ID",
+            "value": "ede9b329-74e5-4557-a416-03669424dfd2",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_HOTLINE_KEY",
+            "value": "807c76ba-c76d-4e76-88e4-951c903c8d6e",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_APIXU_API_KEY",
+            "value": "1bf3f88ea0ad48af937191430171705",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_INSTABUG_KEY",
+            "value": "ddf1a6e9c951de2a258d2fb40dada1c6",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_SENDBIRD_APP_ID",
+            "value": "895F21E1-20A3-4CDB-8278-C1575016CA65",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_CLOUDINARY_WATERMARK",
+            "value": "",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_S3_IMAGE_BUCKET",
+            "value": "droneup-images",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_S3_VIDEO_BUCKET",
+            "value": "droneup-source-1ov33bg3pmwou",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_S3_API_KEY",
+            "value": "AKIAJK23FATA62FLB4OA",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_S3_API_SECRET",
+            "value": "bVFlCDlSLvJlpMft1kByd6tMbX0sGA4o9hr3XjeG",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "SLACK_CHANNEL",
+            "value": "#c_droneup_dev_ios",
+            "is_expand": "true"
+          }
+        ]
+      },
+      "version_seed": "1.2.0",
+      "release_name": "live",
+      "versioning": "patch"
+    }
+  },
+  "droneup-web": {
+    "type": "bitrise",
+    "requiredArgs": {
+      "target": [
+        "-t, --target <target>",
+        "Settings applied to application build\ndev, test, live, release are valid."
+      ],
+      "branch": [
+        "-b, --branch <branch>",
+        "Branch name of commit sha to be built by application."
+      ]
+    },
+    "dev": {
+      "build": "Heroku Web Dev Build",
+      "repo_url": "git@bitbucket.org:webteks/com.dartfleet.web.git",
+      "default_branch": "develop",
+      "parent_branch": "develop",
+      "upstream_repo_url": "git@bitbucket.org:webteks/com.dartfleet.web.git",
+      "upstream_repo_branch": "develop",
+      "bitrise": {
+        "release_url": "https://www.bitrise.io/app/290f92d6dded8d00/build/start.json",
+        "release_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "3t27vgKnqEhTw6o-r2AFEQ"
+          },
+          "build_params": {
+            "workflow_id": "RELEASE",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "adhoc_url": "https://www.bitrise.io/app/290f92d6dded8d00/build/start.json",
+        "adhoc_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "3t27vgKnqEhTw6o-r2AFEQ"
+          },
+          "build_params": {
+            "workflow_id": "primary",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "additional_json": [
+          {
+            "mapped_to": "BUILD_SLACK_URL",
+            "value": "https://hooks.slack.com/services/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",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "HEROKU_APP_NAME",
+            "value": "droneup-dev",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BUILD_SETTINGS_DOWNLOAD_URL",
+            "value": "$BITRISEIO_dev_env_URL",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "SLACK_CHANNEL",
+            "value": "#c_droneup_dev_web",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "PUBLIC_URL",
+            "value": "https://manage-dev.droneup.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "APP_ID",
+            "value": "6310BC44-383B-6119-FF03-01F4D2EC6D00",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "APP_KEY",
+            "value": "8B01B4AE-BC7E-D2BD-FF80-7E4B6E1B5900",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "APP_VER",
+            "value": "dev",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "AUTH0_CLIENT_ID",
+            "value": "WeYD606msBKOfY0OFsYNfTlzPoYAJZoI",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "AUTH0_DOMAIN",
+            "value": "droneup-dev.auth0.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_CHECK_MAIL_API",
+            "value": "/services/UserAccountValidation/1.0.0/IsUserAccountExist?email=%22",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_CONTRACTOR_API",
+            "value": "/services/users/1.0.0/contractor",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_TABLE_PROPERTIES_API",
+            "value": "/services/meta/1.0.0/columns?extended=false&table=",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_USER_REGISTRATION_KEY",
+            "value": "/data/UserRegistrationKey",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_USER_RESEND_REGISTRATION_KEY",
+            "value": "/services/EmailService/1.0.0/resendUserRegistrationKey",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_COMPLETE_MISSION_API",
+            "value": "/services/missions/1.0.0/mark_as_completed",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_USER_ROLE",
+            "value": "/users/userroles",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_USERS_API",
+            "value": "/users",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "CLOUDINARY_IR_PRESET",
+            "value": "kdxp4xrb",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "CLOUDINARY_NAME",
+            "value": "dartfleet",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "CLOUDINARY_PRESET",
+            "value": "kdxp4xrb",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "DOMAIN_NAME",
+            "value": "https://manage-dev.droneup.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FACEBOOK_APP_ID",
+            "value": "230672810712304",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "GOOGLE_CLIENT_ID",
+            "value": "158187728515-41vu6t999i9nrtqqqanuuisv08n7oo4d.apps.googleusercontent.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "LOGENTRIES_TOKEN",
+            "value": "37200e50-a1bf-4e7e-8e3d-247658c997c0",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "MISSION_API",
+            "value": "/data/Mission",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "REST_API",
+            "value": "https://droneup.backendless.com/api",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "REST_FACEBOOK_SDK",
+            "value": "/users/social/facebook/sdk/login",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "REST_GOOGLEPLUS_SDK",
+            "value": "/users/social/googleplus/sdk/login",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "REST_KEY",
+            "value": "83FB4F89-D468-4A0C-FF32-C90E98BFD200",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "SENDBIRD_APP_ID",
+            "value": "45F45C45-0625-446B-AF80-57E5C434055B",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "TERMS_PAGE",
+            "value": "https://www.droneup.com/terms",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "TINYMCE_ID",
+            "value": "D9A81863-BF2D-4EE8-B13D-748C9F7CCA02",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "TRAINING_COURSES_LIST",
+            "value": "https://dev-droneuplms.pantheonsite.io/wp-json/course/v1/list",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "TRAINING_KEY",
+            "value": "sv44ygvsxrrbr3nwklqdhot12ofhml1torb0zvzk",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "SENDBIRD_API_ID",
+            "value": "45F45C45-0625-446B-AF80-57E5C434055B",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_APIKEY",
+            "value": "AIzaSyA_p7CVdzv8n8ya9a6Jb3zO3i698obdIz0",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_AUTH_DOMAIN",
+            "value": "droneup-dashboard-dev.firebaseapp.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_DATABASE_URL",
+            "value": "https://droneup-dashboard-dev.firebaseio.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_PROJECT_ID",
+            "value": "droneup-dashboard-dev",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_STORAGE_BUCKET",
+            "value": "droneup-dashboard-dev.appspot.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_MESSAGING_SENDER_ID",
+            "value": "767883019484",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "MAPBOX_ACCESS_TOKEN",
+            "value": "pk.eyJ1IjoiYW1yYWNlbCIsImEiOiJjajdnandneG4xYXpjMzFwamdwcXltM3U0In0.LpdUbBnZ_CBWIJRSDCs5HA",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_AWS_ACCESS_KEY_ID",
+            "value": "AKIAJVKKWJ5PNKA3JTTQ",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_AWS_IMAGE_BUCKET_NAME",
+            "value": "droneup-dev-images",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_AWS_REGION",
+            "value": "us-east-1",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_AWS_SECRET_ACCESS_KEY",
+            "value": "zXS+MzLfdwcmJmnkyjED9EKX8oCbos0FajXgjxZG",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_AWS_VIDEO_BUCKET_NAME",
+            "value": "droneup-dev-source-15oa8sk8c93cg",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_SENDBIRD_API_TOKEN",
+            "value": "5b66a153ffe68b6fded7b5566f136cb599b9ba09",
+            "is_expand": "true"
+          }
+        ]
+      },
+      "version_seed": "1.0.0",
+      "release_name": "dev",
+      "versioning": "prepatch"
+    },
+    "test": {
+      "build": "Heroku Web Test Build",
+      "repo_url": "git@bitbucket.org:webteks/com.dartfleet.web.git",
+      "upstream_repo_url": "git@bitbucket.org:/webteks/com.dartfleet.web.git",
+      "upstream_repo_branch": "develop",
+      "default_branch": "develop",
+      "parent_branch": "develop",
+      "bitrise": {
+        "release_url": "https://www.bitrise.io/app/290f92d6dded8d00/build/start.json",
+        "release_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "3t27vgKnqEhTw6o-r2AFEQ"
+          },
+          "build_params": {
+            "workflow_id": "RELEASE",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "adhoc_url": "https://www.bitrise.io/app/290f92d6dded8d00/build/start.json",
+        "adhoc_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "3t27vgKnqEhTw6o-r2AFEQ"
+          },
+          "build_params": {
+            "workflow_id": "primary",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "additional_json": [
+          {
+            "mapped_to": "BUILD_SLACK_URL",
+            "value": "https://hooks.slack.com/services/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",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "HEROKU_APP_NAME",
+            "value": "droneup-test",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BUILD_SETTINGS_DOWNLOAD_URL",
+            "value": "$BITRISEIO_test_env_URL",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "SLACK_CHANNEL",
+            "value": "#c_droneup_dev_web",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "PUBLIC_URL",
+            "value": "https://manage-test.droneup.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "APP_ID",
+            "value": "1529EBD5-33A8-6708-FF59-D4B16330F600",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "APP_KEY",
+            "value": "E0F864BB-A141-B5E9-FFB4-83E1B509BC00",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "APP_VER",
+            "value": "dev",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "AUTH0_CLIENT_ID",
+            "value": "JcjF5njLLDTUwP94DQ7g0knDCVRsTOQl",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "AUTH0_DOMAIN",
+            "value": "droneup-test.auth0.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_CHECK_MAIL_API",
+            "value": "/services/UserAccountValidation/1.0.0/IsUserAccountExist?email=%22",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_CONTRACTOR_API",
+            "value": "/services/users/1.0.0/contractor",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_TABLE_PROPERTIES_API",
+            "value": "/services/meta/1.0.0/columns?extended=false&table=",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_USER_REGISTRATION_KEY",
+            "value": "/data/UserRegistrationKey",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_USER_RESEND_REGISTRATION_KEY",
+            "value": "/services/EmailService/1.0.0/resendUserRegistrationKey",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_COMPLETE_MISSION_API",
+            "value": "/services/missions/1.0.0/mark_as_completed",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_USER_ROLE",
+            "value": "/users/userroles",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_USERS_API",
+            "value": "/users",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "CLOUDINARY_IR_PRESET",
+            "value": "kdxp4xrb",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "CLOUDINARY_NAME",
+            "value": "dartfleet",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "CLOUDINARY_PRESET",
+            "value": "kdxp4xrb",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "DOMAIN_NAME",
+            "value": "https://manage-test.droneup.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FACEBOOK_APP_ID",
+            "value": "230672810712304",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "GOOGLE_CLIENT_ID",
+            "value": "158187728515-41vu6t999i9nrtqqqanuuisv08n7oo4d.apps.googleusercontent.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "LOGENTRIES_TOKEN",
+            "value": "5d11ed87-c8e3-4563-8116-68f909ed4bc4",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "MISSION_API",
+            "value": "/data/Mission",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "REST_API",
+            "value": "https://droneup.backendless.com/api",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "REST_FACEBOOK_SDK",
+            "value": "/users/social/facebook/sdk/login",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "REST_GOOGLEPLUS_SDK",
+            "value": "/users/social/googleplus/sdk/login",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "REST_KEY",
+            "value": "79EE7CD7-086C-BDA0-FF38-6C089131A800",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "SENDBIRD_APP_ID",
+            "value": "18696103-8A2A-44AB-A04D-941A9B5C8CE7",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "TERMS_PAGE",
+            "value": "https://test-flywithdartcom.pantheonsite.io/terms",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "TINYMCE_ID",
+            "value": "D9A81863-BF2D-4EE8-B13D-748C9F7CCA02",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "TRAINING_COURSES_LIST",
+            "value": "https://test-droneuplms.pantheonsite.io/wp-json/course/v1/list",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "TRAINING_KEY",
+            "value": "sv44ygvsxrrbr3nwklqdhot12ofhml1torb0zvzk",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "SENDBIRD_API_TOKEN",
+            "value": "ead30438e52455410f3db4e79526eb9918c9a48b",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_APIKEY",
+            "value": "AIzaSyBqiykSeVx7u3yF1-43n_y8K68aLcJUg10",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_AUTH_DOMAIN",
+            "value": "droneup-dashboard.firebaseapp.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_DATABASE_URL",
+            "value": "https://droneup-dashboard.firebaseio.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_PROJECT_ID",
+            "value": "droneup-dashboard",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_STORAGE_BUCKET",
+            "value": "droneup-dashboard.appspot.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_MESSAGING_SENDER_ID",
+            "value": "67174361933",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "MAPBOX_ACCESS_TOKEN",
+            "value": "pk.eyJ1IjoiYW1yYWNlbCIsImEiOiJjajdnandneG4xYXpjMzFwamdwcXltM3U0In0.LpdUbBnZ_CBWIJRSDCs5HA",
+            "is_expand": "true"
+          }
+        ]
+      },
+      "version_seed": "1.6.0",
+      "release_name": "test",
+      "versioning": "prepatch"
+    },
+    "live": {
+      "build": "Heroku Web Live Build",
+      "repo_url": "git@bitbucket.org:webteks/com.dartfleet.web.git",
+      "upstream_repo_url": "git@bitbucket.org:/webteks/com.dartfleet.web.git",
+      "upstream_repo_branch": "develop",
+      "default_branch": "develop",
+      "parent_branch": "develop",
+      "bitrise": {
+        "release_url": "https://www.bitrise.io/app/290f92d6dded8d00/build/start.json",
+        "release_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "3t27vgKnqEhTw6o-r2AFEQ"
+          },
+          "build_params": {
+            "workflow_id": "RELEASE",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "adhoc_url": "https://www.bitrise.io/app/290f92d6dded8d00/build/start.json",
+        "adhoc_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "3t27vgKnqEhTw6o-r2AFEQ"
+          },
+          "build_params": {
+            "workflow_id": "primary",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "additional_json": [
+          {
+            "mapped_to": "BUILD_SLACK_URL",
+            "value": "https://hooks.slack.com/services/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",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "HEROKU_APP_NAME",
+            "value": "droneup-live",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BUILD_SETTINGS_DOWNLOAD_URL",
+            "value": "$BITRISEIO_live_env_URL",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "SLACK_CHANNEL",
+            "value": "#c_droneup_dev_web",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "PUBLIC_URL",
+            "value": "https://manage.droneup.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "APP_ID",
+            "value": "D5AF1CB4-2698-9DDA-FF93-441EF9736A00",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "APP_KEY",
+            "value": "5070C19F-F3AC-290C-FFF4-AF911A5EEA00",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "APP_VER",
+            "value": "dev",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "AUTH0_CLIENT_ID",
+            "value": "c7gohw63SY93J24vafLW7KU60aCNz4oK",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "AUTH0_DOMAIN",
+            "value": "droneup.auth0.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_CHECK_MAIL_API",
+            "value": "/services/UserAccountValidation/1.0.0/IsUserAccountExist?email=%22",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_CONTRACTOR_API",
+            "value": "/services/users/1.0.0/contractor",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_TABLE_PROPERTIES_API",
+            "value": "/services/meta/1.0.0/columns?extended=false&table=",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_USER_REGISTRATION_KEY",
+            "value": "/data/UserRegistrationKey",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_USER_RESEND_REGISTRATION_KEY",
+            "value": "/services/EmailService/1.0.0/resendUserRegistrationKey",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_COMPLETE_MISSION_API",
+            "value": "/services/missions/1.0.0/mark_as_completed",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_USER_ROLE",
+            "value": "/users/userroles",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_USERS_API",
+            "value": "/users",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "CLOUDINARY_IR_PRESET",
+            "value": "kdxp4xrb",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "CLOUDINARY_NAME",
+            "value": "dartfleet",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "CLOUDINARY_PRESET",
+            "value": "kdxp4xrb",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "DOMAIN_NAME",
+            "value": "https://manage.droneup.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FACEBOOK_APP_ID",
+            "value": "230672810712304",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "GOOGLE_CLIENT_ID",
+            "value": "158187728515-41vu6t999i9nrtqqqanuuisv08n7oo4d.apps.googleusercontent.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "LOGENTRIES_TOKEN",
+            "value": "5d11ed87-c8e3-4563-8116-68f909ed4bc4",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "MISSION_API",
+            "value": "/data/Mission",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "REST_API",
+            "value": "https://droneup.backendless.com/api",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "REST_FACEBOOK_SDK",
+            "value": "/users/social/facebook/sdk/login",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "REST_GOOGLEPLUS_SDK",
+            "value": "/users/social/googleplus/sdk/login",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "REST_KEY",
+            "value": "D5ECD168-A05C-EA56-FF81-05001961C800",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "SENDBIRD_APP_ID",
+            "value": "895F21E1-20A3-4CDB-8278-C1575016CA65",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "TERMS_PAGE",
+            "value": "https://www.droneup.com/terms",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "TINYMCE_ID",
+            "value": "D9A81863-BF2D-4EE8-B13D-748C9F7CCA02",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "TRAINING_COURSES_LIST",
+            "value": "https://live-droneuplms.pantheonsite.io/wp-json/course/v1/list",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "TRAINING_KEY",
+            "value": "sv44ygvsxrrbr3nwklqdhot12ofhml1torb0zvzk",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "SENDBIRD_API_ID",
+            "value": "895F21E1-20A3-4CDB-8278-C1575016CA65",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_APIKEY",
+            "value": "AIzaSyBqiykSeVx7u3yF1-43n_y8K68aLcJUg10",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_AUTH_DOMAIN",
+            "value": "droneup-dashboard.firebaseapp.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_DATABASE_URL",
+            "value": "https://droneup-dashboard.firebaseio.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_PROJECT_ID",
+            "value": "droneup-dashboard",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_STORAGE_BUCKET",
+            "value": "droneup-dashboard.appspot.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_MESSAGING_SENDER_ID",
+            "value": "67174361933",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "MAPBOX_ACCESS_TOKEN",
+            "value": "pk.eyJ1IjoiYW1yYWNlbCIsImEiOiJjajdnandneG4xYXpjMzFwamdwcXltM3U0In0.LpdUbBnZ_CBWIJRSDCs5HA",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_AWS_ACCESS_KEY_ID",
+            "value": "AKIAJK23FATA62FLB4OA",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_AWS_IMAGE_BUCKET_NAME",
+            "value": "droneup-images",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_AWS_REGION",
+            "value": "us-east-1",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_AWS_SECRET_ACCESS_KEY",
+            "value": "bVFlCDlSLvJlpMft1kByd6tMbX0sGA4o9hr3XjeG",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_AWS_VIDEO_BUCKET_NAME",
+            "value": "droneup-source-1ov33bg3pmwou",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_SENDBIRD_API_TOKEN",
+            "value": "cbe0ca0117bbf4dce898bb95b1f0d2001562296f",
+            "is_expand": "true"
+          }
+        ]
+      },
+      "version_seed": "1.0.0",
+      "release_name": "live",
+      "versioning": "patch"
+    },
+    "release": {
+      "build": "Heroku Web Live Build",
+      "repo_url": "git@bitbucket.org:webteks/com.dartfleet.web.git",
+      "upstream_repo_url": "git@bitbucket.org:/webteks/com.dartfleet.web.git",
+      "upstream_repo_branch": "develop",
+      "default_branch": "develop",
+      "parent_branch": "develop",
+      "bitrise": {
+        "release_url": "https://www.bitrise.io/app/290f92d6dded8d00/build/start.json",
+        "release_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "3t27vgKnqEhTw6o-r2AFEQ"
+          },
+          "build_params": {
+            "workflow_id": "RELEASE",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "adhoc_url": "https://www.bitrise.io/app/290f92d6dded8d00/build/start.json",
+        "adhoc_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "3t27vgKnqEhTw6o-r2AFEQ"
+          },
+          "build_params": {
+            "workflow_id": "RELEASE",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "additional_json": [
+          {
+            "mapped_to": "BUILD_SLACK_URL",
+            "value": "https://hooks.slack.com/services/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",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "HEROKU_APP_NAME",
+            "value": "droneup-live",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BUILD_SETTINGS_DOWNLOAD_URL",
+            "value": "$BITRISEIO_live_env_URL",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "SLACK_CHANNEL",
+            "value": "#c_droneup_dev_web",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "PUBLIC_URL",
+            "value": "https://manage.droneup.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "APP_ID",
+            "value": "D5AF1CB4-2698-9DDA-FF93-441EF9736A00",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "APP_KEY",
+            "value": "5070C19F-F3AC-290C-FFF4-AF911A5EEA00",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "APP_VER",
+            "value": "dev",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "AUTH0_CLIENT_ID",
+            "value": "c7gohw63SY93J24vafLW7KU60aCNz4oK",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "AUTH0_DOMAIN",
+            "value": "droneup.auth0.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_CHECK_MAIL_API",
+            "value": "/services/UserAccountValidation/1.0.0/IsUserAccountExist?email=%22",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_CONTRACTOR_API",
+            "value": "/services/users/1.0.0/contractor",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_TABLE_PROPERTIES_API",
+            "value": "/services/meta/1.0.0/columns?extended=false&table=",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_USER_REGISTRATION_KEY",
+            "value": "/data/UserRegistrationKey",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_USER_RESEND_REGISTRATION_KEY",
+            "value": "/services/EmailService/1.0.0/resendUserRegistrationKey",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_COMPLETE_MISSION_API",
+            "value": "/services/missions/1.0.0/mark_as_completed",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_USER_ROLE",
+            "value": "/users/userroles",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_USERS_API",
+            "value": "/users",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "CLOUDINARY_IR_PRESET",
+            "value": "kdxp4xrb",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "CLOUDINARY_NAME",
+            "value": "dartfleet",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "CLOUDINARY_PRESET",
+            "value": "kdxp4xrb",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "DOMAIN_NAME",
+            "value": "https://manage.droneup.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FACEBOOK_APP_ID",
+            "value": "230672810712304",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "GOOGLE_CLIENT_ID",
+            "value": "158187728515-41vu6t999i9nrtqqqanuuisv08n7oo4d.apps.googleusercontent.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "LOGENTRIES_TOKEN",
+            "value": "5d11ed87-c8e3-4563-8116-68f909ed4bc4",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "MISSION_API",
+            "value": "/data/Mission",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "REST_API",
+            "value": "https://droneup.backendless.com/api",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "REST_FACEBOOK_SDK",
+            "value": "/users/social/facebook/sdk/login",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "REST_GOOGLEPLUS_SDK",
+            "value": "/users/social/googleplus/sdk/login",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "REST_KEY",
+            "value": "D5ECD168-A05C-EA56-FF81-05001961C800",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "SENDBIRD_APP_ID",
+            "value": "895F21E1-20A3-4CDB-8278-C1575016CA65",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "TERMS_PAGE",
+            "value": "https://www.droneup.com/terms",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "TINYMCE_ID",
+            "value": "D9A81863-BF2D-4EE8-B13D-748C9F7CCA02",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "TRAINING_COURSES_LIST",
+            "value": "https://live-droneuplms.pantheonsite.io/wp-json/course/v1/list",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "TRAINING_KEY",
+            "value": "sv44ygvsxrrbr3nwklqdhot12ofhml1torb0zvzk",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "SENDBIRD_API_ID",
+            "value": "895F21E1-20A3-4CDB-8278-C1575016CA65",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_APIKEY",
+            "value": "AIzaSyBqiykSeVx7u3yF1-43n_y8K68aLcJUg10",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_AUTH_DOMAIN",
+            "value": "droneup-dashboard.firebaseapp.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_DATABASE_URL",
+            "value": "https://droneup-dashboard.firebaseio.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_PROJECT_ID",
+            "value": "droneup-dashboard",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_STORAGE_BUCKET",
+            "value": "droneup-dashboard.appspot.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_MESSAGING_SENDER_ID",
+            "value": "67174361933",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "MAPBOX_ACCESS_TOKEN",
+            "value": "pk.eyJ1IjoiYW1yYWNlbCIsImEiOiJjajdnandneG4xYXpjMzFwamdwcXltM3U0In0.LpdUbBnZ_CBWIJRSDCs5HA",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_AWS_ACCESS_KEY_ID",
+            "value": "AKIAJK23FATA62FLB4OA",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_AWS_IMAGE_BUCKET_NAME",
+            "value": "droneup-images",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_AWS_REGION",
+            "value": "us-east-1",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_AWS_SECRET_ACCESS_KEY",
+            "value": "bVFlCDlSLvJlpMft1kByd6tMbX0sGA4o9hr3XjeG",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_AWS_VIDEO_BUCKET_NAME",
+            "value": "droneup-source-1ov33bg3pmwou",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_SENDBIRD_API_TOKEN",
+            "value": "cbe0ca0117bbf4dce898bb95b1f0d2001562296f",
+            "is_expand": "true"
+          }
+        ]
+      },
+      "version_seed": "1.0.0",
+      "release_name": "live",
+      "versioning": "patch"
+    }
+  },
+  "droneup-api": {
+    "requiredArgs": {
+      "target": [
+        "-t, --target <target>",
+        "Settings applied to application build\ndev, test, live, release are valid."
+      ],
+      "branch": [
+        "-b, --branch <branch>",
+        "Branch name of commit sha to be built by application."
+      ]
+    },
+    "type": "bitrise",
+    "dev": {
+      "build": "Backendless API Dev Build",
+      "repo_url": "git@bitbucket.org:webteks/com.dartfleet.backend.api.git",
+      "upstream_repo_url": "git@bitbucket.org:/webteks/com.dartfleet.backend.api.git",
+      "upstream_repo_branch": "develop",
+      "default_branch": "develop",
+      "parent_branch": "develop",
+      "bitrise": {
+        "release_url": "https://www.bitrise.io/app/8ecd3b21db3b3577/build/start.json",
+        "release_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "Uf22T6iyBMH8H7tKjLQqgA"
+          },
+          "build_params": {
+            "workflow_id": "RELEASE",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "adhoc_url": "https://www.bitrise.io/app/8ecd3b21db3b3577/build/start.json",
+        "adhoc_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "Uf22T6iyBMH8H7tKjLQqgA"
+          },
+          "build_params": {
+            "workflow_id": "primary",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "additional_json": [
+          {
+            "mapped_to": "BUILD_SLACK_URL",
+            "value": "https://hooks.slack.com/services/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",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_APPLICATION_ID",
+            "value": "6310BC44-383B-6119-FF03-01F4D2EC6D00",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_APPLICATION_KEY",
+            "value": "32ECF4CF-1FEE-29E3-FF13-FCBC2965C500",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "SLACK_CHANNEL",
+            "value": "#c_droneup_dev_backend",
+            "is_expand": "true"
+          }
+        ]
+      },
+      "version_seed": "1.0.0",
+      "release_name": "dev",
+      "versioning": "prepatch"
+    },
+    "test": {
+      "build": "Backendless API Test Build",
+      "repo_url": "git@bitbucket.org:webteks/com.dartfleet.backend.api.git",
+      "upstream_repo_url": "git@bitbucket.org:/webteks/com.dartfleet.backend.api.git",
+      "upstream_repo_branch": "develop",
+      "default_branch": "develop",
+      "parent_branch": "develop",
+      "bitrise": {
+        "release_url": "https://www.bitrise.io/app/8ecd3b21db3b3577/build/start.json",
+        "release_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "Uf22T6iyBMH8H7tKjLQqgA"
+          },
+          "build_params": {
+            "workflow_id": "RELEASE",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "adhoc_url": "https://www.bitrise.io/app/8ecd3b21db3b3577/build/start.json",
+        "adhoc_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "Uf22T6iyBMH8H7tKjLQqgA"
+          },
+          "build_params": {
+            "workflow_id": "primary",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "additional_json": [
+          {
+            "mapped_to": "BUILD_SLACK_URL",
+            "value": "https://hooks.slack.com/services/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",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_APPLICATION_ID",
+            "value": "1529EBD5-33A8-6708-FF59-D4B16330F600",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "BUILD_APPLICATION_KEY",
+            "value": "5EB9A193-AC06-3A89-FF07-1FC7E2213500",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "SLACK_CHANNEL",
+            "value": "#c_droneup_dev_backend",
+            "is_expand": "true"
+          }
+        ]
+      },
+      "version_seed": "1.0.0",
+      "release_name": "test",
+      "versioning": "prepatch"
+    },
+    "live": {
+      "build": "Heroku Web Live Build",
+      "repo_url": "git@bitbucket.org:webteks/com.dartfleet.web.git",
+      "upstream_repo_url": "git@bitbucket.org:/webteks/com.dartfleet.web.git",
+      "upstream_repo_branch": "develop",
+      "default_branch": "develop",
+      "parent_branch": "develop",
+      "bitrise": {
+        "release_url": "https://www.bitrise.io/app/290f92d6dded8d00/build/start.json",
+        "release_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "3t27vgKnqEhTw6o-r2AFEQ"
+          },
+          "build_params": {
+            "workflow_id": "RELEASE",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "adhoc_url": "https://www.bitrise.io/app/290f92d6dded8d00/build/start.json",
+        "adhoc_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "3t27vgKnqEhTw6o-r2AFEQ"
+          },
+          "build_params": {
+            "workflow_id": "primary",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "additional_json": [
+          {
+            "mapped_to": "BUILD_SLACK_URL",
+            "value": "https://hooks.slack.com/services/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",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "HEROKU_APP_NAME",
+            "value": "droneup-live",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BUILD_SETTINGS_DOWNLOAD_URL",
+            "value": "$BITRISEIO_live_env_URL",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "SLACK_CHANNEL",
+            "value": "#c_droneup_dev_web",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "PUBLIC_URL",
+            "value": "https://manage.droneup.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "APP_ID",
+            "value": "D5AF1CB4-2698-9DDA-FF93-441EF9736A00",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "APP_KEY",
+            "value": "5070C19F-F3AC-290C-FFF4-AF911A5EEA00",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "APP_VER",
+            "value": "dev",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "AUTH0_CLIENT_ID",
+            "value": "c7gohw63SY93J24vafLW7KU60aCNz4oK",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "AUTH0_DOMAIN",
+            "value": "droneup.auth0.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_CHECK_MAIL_API",
+            "value": "/services/UserAccountValidation/1.0.0/IsUserAccountExist?email=%22",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_CONTRACTOR_API",
+            "value": "/services/users/1.0.0/contractor",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_TABLE_PROPERTIES_API",
+            "value": "/services/meta/1.0.0/columns?extended=false&table=",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_USER_REGISTRATION_KEY",
+            "value": "/data/UserRegistrationKey",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_USER_RESEND_REGISTRATION_KEY",
+            "value": "/services/EmailService/1.0.0/resendUserRegistrationKey",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_COMPLETE_MISSION_API",
+            "value": "/services/missions/1.0.0/mark_as_completed",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_USER_ROLE",
+            "value": "/users/userroles",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_USERS_API",
+            "value": "/users",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "CLOUDINARY_IR_PRESET",
+            "value": "kdxp4xrb",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "CLOUDINARY_NAME",
+            "value": "dartfleet",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "CLOUDINARY_PRESET",
+            "value": "kdxp4xrb",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "DOMAIN_NAME",
+            "value": "https://manage.droneup.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FACEBOOK_APP_ID",
+            "value": "230672810712304",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "GOOGLE_CLIENT_ID",
+            "value": "158187728515-41vu6t999i9nrtqqqanuuisv08n7oo4d.apps.googleusercontent.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "LOGENTRIES_TOKEN",
+            "value": "5d11ed87-c8e3-4563-8116-68f909ed4bc4",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "MISSION_API",
+            "value": "/data/Mission",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "REST_API",
+            "value": "https://droneup.backendless.com/api",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "REST_FACEBOOK_SDK",
+            "value": "/users/social/facebook/sdk/login",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "REST_GOOGLEPLUS_SDK",
+            "value": "/users/social/googleplus/sdk/login",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "REST_KEY",
+            "value": "D5ECD168-A05C-EA56-FF81-05001961C800",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "SENDBIRD_APP_ID",
+            "value": "895F21E1-20A3-4CDB-8278-C1575016CA65",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "TERMS_PAGE",
+            "value": "https://www.droneup.com/terms",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "TINYMCE_ID",
+            "value": "D9A81863-BF2D-4EE8-B13D-748C9F7CCA02",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "TRAINING_COURSES_LIST",
+            "value": "https://live-droneuplms.pantheonsite.io/wp-json/course/v1/list",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "TRAINING_KEY",
+            "value": "sv44ygvsxrrbr3nwklqdhot12ofhml1torb0zvzk",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "SENDBIRD_API_ID",
+            "value": "895F21E1-20A3-4CDB-8278-C1575016CA65",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_APIKEY",
+            "value": "AIzaSyBqiykSeVx7u3yF1-43n_y8K68aLcJUg10",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_AUTH_DOMAIN",
+            "value": "droneup-dashboard.firebaseapp.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_DATABASE_URL",
+            "value": "https://droneup-dashboard.firebaseio.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_PROJECT_ID",
+            "value": "droneup-dashboard",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_STORAGE_BUCKET",
+            "value": "droneup-dashboard.appspot.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_MESSAGING_SENDER_ID",
+            "value": "67174361933",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "MAPBOX_ACCESS_TOKEN",
+            "value": "pk.eyJ1IjoiYW1yYWNlbCIsImEiOiJjajdnandneG4xYXpjMzFwamdwcXltM3U0In0.LpdUbBnZ_CBWIJRSDCs5HA",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_AWS_ACCESS_KEY_ID",
+            "value": "AKIAJK23FATA62FLB4OA",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_AWS_IMAGE_BUCKET_NAME",
+            "value": "droneup-images",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_AWS_REGION",
+            "value": "us-east-1",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_AWS_SECRET_ACCESS_KEY",
+            "value": "bVFlCDlSLvJlpMft1kByd6tMbX0sGA4o9hr3XjeG",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_AWS_VIDEO_BUCKET_NAME",
+            "value": "droneup-source-1ov33bg3pmwou",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_SENDBIRD_API_TOKEN",
+            "value": "cbe0ca0117bbf4dce898bb95b1f0d2001562296f",
+            "is_expand": "true"
+          }
+        ]
+      },
+      "version_seed": "1.0.0",
+      "release_name": "live",
+      "versioning": "patch"
+    },
+    "release": {
+      "build": "Heroku Web Live Build",
+      "repo_url": "git@bitbucket.org:webteks/com.dartfleet.web.git",
+      "upstream_repo_url": "git@bitbucket.org:/webteks/com.dartfleet.web.git",
+      "upstream_repo_branch": "develop",
+      "default_branch": "develop",
+      "parent_branch": "develop",
+      "bitrise": {
+        "release_url": "https://www.bitrise.io/app/290f92d6dded8d00/build/start.json",
+        "release_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "3t27vgKnqEhTw6o-r2AFEQ"
+          },
+          "build_params": {
+            "workflow_id": "RELEASE",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "adhoc_url": "https://www.bitrise.io/app/290f92d6dded8d00/build/start.json",
+        "adhoc_json": {
+          "hook_info": {
+            "type": "bitrise",
+            "api_token": "3t27vgKnqEhTw6o-r2AFEQ"
+          },
+          "build_params": {
+            "workflow_id": "RELEASE",
+            "triggered_by": "jobrunner",
+            "environments": []
+          }
+        },
+        "additional_json": [
+          {
+            "mapped_to": "BUILD_SLACK_URL",
+            "value": "https://hooks.slack.com/services/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",
+            "is_expand": "false"
+          },
+          {
+            "mapped_to": "HEROKU_APP_NAME",
+            "value": "droneup-live",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BUILD_SETTINGS_DOWNLOAD_URL",
+            "value": "$BITRISEIO_live_env_URL",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "SLACK_CHANNEL",
+            "value": "#c_droneup_dev_web",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "PUBLIC_URL",
+            "value": "https://manage.droneup.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "APP_ID",
+            "value": "D5AF1CB4-2698-9DDA-FF93-441EF9736A00",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "APP_KEY",
+            "value": "5070C19F-F3AC-290C-FFF4-AF911A5EEA00",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "APP_VER",
+            "value": "dev",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "AUTH0_CLIENT_ID",
+            "value": "c7gohw63SY93J24vafLW7KU60aCNz4oK",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "AUTH0_DOMAIN",
+            "value": "droneup.auth0.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_CHECK_MAIL_API",
+            "value": "/services/UserAccountValidation/1.0.0/IsUserAccountExist?email=%22",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_CONTRACTOR_API",
+            "value": "/services/users/1.0.0/contractor",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_TABLE_PROPERTIES_API",
+            "value": "/services/meta/1.0.0/columns?extended=false&table=",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_USER_REGISTRATION_KEY",
+            "value": "/data/UserRegistrationKey",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_USER_RESEND_REGISTRATION_KEY",
+            "value": "/services/EmailService/1.0.0/resendUserRegistrationKey",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_COMPLETE_MISSION_API",
+            "value": "/services/missions/1.0.0/mark_as_completed",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_USER_ROLE",
+            "value": "/users/userroles",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "BACKENDLESS_USERS_API",
+            "value": "/users",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "CLOUDINARY_IR_PRESET",
+            "value": "kdxp4xrb",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "CLOUDINARY_NAME",
+            "value": "dartfleet",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "CLOUDINARY_PRESET",
+            "value": "kdxp4xrb",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "DOMAIN_NAME",
+            "value": "https://manage.droneup.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FACEBOOK_APP_ID",
+            "value": "230672810712304",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "GOOGLE_CLIENT_ID",
+            "value": "158187728515-41vu6t999i9nrtqqqanuuisv08n7oo4d.apps.googleusercontent.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "LOGENTRIES_TOKEN",
+            "value": "5d11ed87-c8e3-4563-8116-68f909ed4bc4",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "MISSION_API",
+            "value": "/data/Mission",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "REST_API",
+            "value": "https://droneup.backendless.com/api",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "REST_FACEBOOK_SDK",
+            "value": "/users/social/facebook/sdk/login",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "REST_GOOGLEPLUS_SDK",
+            "value": "/users/social/googleplus/sdk/login",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "REST_KEY",
+            "value": "D5ECD168-A05C-EA56-FF81-05001961C800",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "SENDBIRD_APP_ID",
+            "value": "895F21E1-20A3-4CDB-8278-C1575016CA65",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "TERMS_PAGE",
+            "value": "https://www.droneup.com/terms",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "TINYMCE_ID",
+            "value": "D9A81863-BF2D-4EE8-B13D-748C9F7CCA02",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "TRAINING_COURSES_LIST",
+            "value": "https://live-droneuplms.pantheonsite.io/wp-json/course/v1/list",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "TRAINING_KEY",
+            "value": "sv44ygvsxrrbr3nwklqdhot12ofhml1torb0zvzk",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "SENDBIRD_API_ID",
+            "value": "895F21E1-20A3-4CDB-8278-C1575016CA65",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_APIKEY",
+            "value": "AIzaSyBqiykSeVx7u3yF1-43n_y8K68aLcJUg10",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_AUTH_DOMAIN",
+            "value": "droneup-dashboard.firebaseapp.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_DATABASE_URL",
+            "value": "https://droneup-dashboard.firebaseio.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_PROJECT_ID",
+            "value": "droneup-dashboard",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_STORAGE_BUCKET",
+            "value": "droneup-dashboard.appspot.com",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "FIREBASE_MESSAGING_SENDER_ID",
+            "value": "67174361933",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "MAPBOX_ACCESS_TOKEN",
+            "value": "pk.eyJ1IjoiYW1yYWNlbCIsImEiOiJjajdnandneG4xYXpjMzFwamdwcXltM3U0In0.LpdUbBnZ_CBWIJRSDCs5HA",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_AWS_ACCESS_KEY_ID",
+            "value": "AKIAJK23FATA62FLB4OA",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_AWS_IMAGE_BUCKET_NAME",
+            "value": "droneup-images",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_AWS_REGION",
+            "value": "us-east-1",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_AWS_SECRET_ACCESS_KEY",
+            "value": "bVFlCDlSLvJlpMft1kByd6tMbX0sGA4o9hr3XjeG",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_AWS_VIDEO_BUCKET_NAME",
+            "value": "droneup-source-1ov33bg3pmwou",
+            "is_expand": "true"
+          },
+          {
+            "mapped_to": "HEROKU_ENV_SENDBIRD_API_TOKEN",
+            "value": "cbe0ca0117bbf4dce898bb95b1f0d2001562296f",
+            "is_expand": "true"
+          }
+        ]
+      },
+      "version_seed": "1.0.0",
+      "release_name": "live",
+      "versioning": "patch"
+    }
+  },
+  "pantheon-patching": {
+    "type": "pantheon",
+    "platform": "pantheon",
+    "bitriseApiToken": "e44J76Z6QD6gtGWoEwrU9A",
+    "workFlowId": "primary",
+    "bitriseUrl": "https://www.bitrise.io/app/7fb30de94eed9210/build/start.json",
+    "helpText": {
+      "username": "",
+      "icon_emoji": "",
+      "channel": "",
+      "text": "Jobrunner Pantheon platform help information",
+      "attachments": [
+        {
+          "color": "#365da6",
+          "title": "Available Pantheon Platform Commands",
+          "text": "Actions default to all sites, unless --siteName provided\nPassing --siteName=site1,site2 will limit reports and actions to given sites.\nActions can be appended to chain commands and results into one execution"
+        },
+        {
+          "pretext": "Actions:",
+          "color": "#36a64f",
+          "title": "Actions can be chained together optionally into a Job, and results reported back to user.",
+          "text": "/jobrunner pantheon <optional arguments>"
+        }
+      ]
+    },
+    "requiredArgs": {},
+    "optionalArgs": {
+      "reportOutdated": [
+        "-r, --reportOutdated <report_type>",
+        "Emit report to Slack channel of Pantheon sites with outdated upstreams",
+        "pdf"
+      ],
+      "siteNames": [
+        "-s, --siteNames <sitenames>",
+        "If provided to Pantheon Jobrunner, will scan only sites given.  Default behavior, load all site details for actions"
+      ],
+      "createMultidev": [
+        "-m, --multiDev",
+        "Creates multiDev environment for all sites, can be limited with use of --siteName\nDefault multidev environment name is \"patching\" unless --environment argument is given to jobrunner"
+      ],
+      "applyUpdates": [
+        "-a, --applyUpdates",
+        "Applies upstream updates to a sites patching multiDev environment\nMultidev environment will be created if necessary\nIf --environment argument is given, updates are applied to given name"
+      ],
+      "performBackup": [
+        "-p, --performBackup",
+        "Creates backup of all environments of sites\nIf --environment given then backups are performed only to request site.environment"
+      ],
+      "environment": [
+        "-e, --environment <environment>",
+        "Restricts any action to a sites environments to only environments given as argument\nExample: performBackup"
+      ]
+    }
+  }
+}
